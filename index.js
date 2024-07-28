@@ -6,7 +6,7 @@ const fs = require("fs");
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const FILE_PATH = core.getInput("image_path") || "./assets/tryhackme-badge.png";
 const THM_USERNAME = core.getInput("username") || "DhanushNehru";
-const THM_USER_ID = core.getInput("user_id") || "1000000";
+const THM_USER_ID = core.getInput("user_id") || "1995656";
 
 /*
  * Executes a command and returns its result as promise
