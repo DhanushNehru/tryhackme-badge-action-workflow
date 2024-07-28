@@ -1,0 +1,34 @@
+name: "TryHackMe Badge Action Workflow"
+author: "Dhanush Nehru - dhanushnehru"
+description: "A github action for tryhackme to fetch and regenerate static badge image which can be used in the README"
+
+inputs:
+  image_path:
+    description: "Path to save the badge"
+    default: "./assets/tryhackme-badge.png"
+    required: false
+  username:
+    description: "Your TryHackMe username"
+    required: true
+  user_id:
+    description: "Your TryHackMe user_id"
+    required: true
+  committer_username:
+    description: "Your GitHub username"
+    default: "dhanushnehru"
+    required: false
+  commit_message:
+    description: "Commit message"
+    default: "Updated THM profile badge"
+    required: false
+  GITHUB_TOKEN:
+    description: "Your GitHub Token"
+    required: true
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+branding:
+  icon: "lock"
+  color: "red"
