@@ -5,7 +5,7 @@ const fs = require("fs");
 
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const FILE_PATH = core.getInput("image_path") || "./assets/tryhackme-badge.png";
-const THM_USERNAME = core.getInput("username") || "DhanushNehru";
+const THM_USERNAME = core.getInput("username") || "dhanushnehru";
 const THM_USER_ID = core.getInput("user_id") || "1995656";
 
 /*
@@ -67,7 +67,7 @@ const downloadAndCommitBadge = async (githubToken, filePath, username) => {
     const url = `https://tryhackme-badges.s3.amazonaws.com/${username}.png`;
     const path = filePath;
     const committerUsername = core.getInput("committer_username");
-    const commitMessage = core.getInput("commit_message");
+    const commitMessage = core.getInput("commit_message") || "Updated THM profile badge using action workflow by Dhanush Nehru";
 
     const res = await axios({
       url,
