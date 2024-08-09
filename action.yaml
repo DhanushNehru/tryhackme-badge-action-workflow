@@ -30,5 +30,5 @@ runs:
   main: "dist/index.js"
 
 branding:
-  icon: ""
+  icon: "award"
   color: "blue"
